@@ -84,10 +84,14 @@ Author URI: http://themeforest.net/user/Ansonika/
   overflow: hidden;
 }
 #preloader.loaded {
-  -webkit-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -moz-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -o-animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation: background 0.65s normal forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation: background 0.65s normal forwards
+    cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-animation: background 0.65s normal forwards
+    cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-animation: background 0.65s normal forwards
+    cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: background 0.65s normal forwards
+    cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition-delay: 1s;
   -moz-transition-delay: 1s;
   -o-transition-delay: 1s;
@@ -102,10 +106,10 @@ Author URI: http://themeforest.net/user/Ansonika/
   left: 50%;
   margin-left: -25px;
   margin-top: -25px;
-  -webkit-animation: circle infinite .95s linear;
-  -moz-animation: circle infinite .95s linear;
-  -o-animation: circle infinite .95s linear;
-  animation: circle infinite .95s linear;
+  -webkit-animation: circle infinite 0.95s linear;
+  -moz-animation: circle infinite 0.95s linear;
+  -o-animation: circle infinite 0.95s linear;
+  animation: circle infinite 0.95s linear;
   border: 2px solid #111;
   border-top-color: rgba(255, 255, 255, 0.2);
   border-right-color: rgba(255, 255, 255, 0.2);
@@ -219,7 +223,7 @@ h5,
 h6 {
   color: #333;
   font-weight: 700;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
   line-height: 1.3;
 }
 
@@ -262,7 +266,8 @@ a {
   transition: all 0.3s ease-in-out;
   outline: none;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #24262d;
   text-decoration: none;
   outline: none;
@@ -547,13 +552,13 @@ header.fixed_header.sticky .hamburger__inner::after {
   }
 }
 .hamburger_2:hover .hamburger__inner {
-  animation: burger .4s ease;
+  animation: burger 0.4s ease;
 }
 .hamburger_2:hover .hamburger__inner:before {
-  animation: burger .4s .1s ease;
+  animation: burger 0.4s 0.1s ease;
 }
 .hamburger_2:hover .hamburger__inner:after {
-  animation: burger .4s .2s ease;
+  animation: burger 0.4s 0.2s ease;
 }
 .hamburger_2 .hamburger__box {
   width: 24px;
@@ -764,7 +769,8 @@ header.fixed_header.sticky .hamburger__inner::after {
   .main-menu #mainNav ul li a:before {
     display: none !important;
   }
-  .main-menu #mainNav ul li a:hover, .main-menu #mainNav ul li a.active {
+  .main-menu #mainNav ul li a:hover,
+  .main-menu #mainNav ul li a.active {
     color: #978667 !important;
   }
   .main-menu #mainNav ul li a.btn_1 {
@@ -789,11 +795,11 @@ header.fixed_header.sticky .hamburger__inner::after {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: all .5s ease;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: all 0.5s ease;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1060,7 +1066,7 @@ img.jarallax-img.kenburns-2 {
 /* 2.  CONTENT */
 /*============================================================================================*/
 .intro em {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 32px;
   font-size: 2rem;
   font-style: normal;
@@ -1379,7 +1385,12 @@ a.box_cat_rooms:hover .background-image {
   border-width: 0;
 }
 .box_facilities.white {
-  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent) 1 60%;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    )
+    1 60%;
 }
 .box_facilities.white h3 {
   color: #fff;
@@ -1933,8 +1944,9 @@ a.box_cat_rooms:hover .background-image {
   animation: marquee 140s linear infinite;
 }
 .marquee .content {
-  opacity: 0.05;
+  opacity: 0.5;
   line-height: 1.2;
+  color: #978667;
 }
 
 @keyframes marquee {
@@ -2045,7 +2057,7 @@ a.box_cat_rooms:hover .background-image {
   font-size: 52px;
   font-size: 3.25rem;
   font-weight: 700;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
   line-height: 1.2;
 }
 
