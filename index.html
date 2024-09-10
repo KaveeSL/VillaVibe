@@ -1,8 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="zxx">
+  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <form method="post" action="php/reserve_connection.php" id="bookingform" autocomplete="off">
+    <form method="post" action="php/contact_connection.php" id="contactform">
+      
+
     <meta
       name="description"
       content="Simple and easy to edit Bed and Breakfast site template"
@@ -11,6 +17,8 @@
     <title>VillaVibe</title>
 
     <!-- Favicons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
@@ -122,6 +130,14 @@
                       >Book Now</a
                     >
                   </li>
+                  
+                  <!-- login button -->
+                  <li>
+                    <a href="#" class="">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                </li>
+                
                 </ul>
               </nav>
             </div>
@@ -898,300 +914,289 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-7" id="booking_section">
-            <ul class="nav nav-tabs" id="customTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="first_tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#first_tab_pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="first_tab_pane"
-                  aria-selected="true"
+
+         <!-- Booking section -->
+<div class="col-xl-7" id="booking_section">
+  <ul class="nav nav-tabs" id="customTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="first_tab"
+        data-bs-toggle="tab"
+        data-bs-target="#first_tab_pane"
+        type="button"
+        role="tab"
+        aria-controls="first_tab_pane"
+        aria-selected="true"
+      >
+        Check Availability
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="second_tab"
+        data-bs-toggle="tab"
+        data-bs-target="#second_tab_pane"
+        type="button"
+        role="tab"
+        aria-controls="second_tab_pane"
+        aria-selected="false"
+      >
+        Contact Us
+      </button>
+    </li>
+  </ul>
+  <!-- /tabs -->
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="first_tab_pane"
+      role="tabpanel"
+      aria-labelledby="first_tab"
+      tabindex="0"
+    >
+      <div class="booking_wrapper">
+        <div id="message-booking"></div>
+        <form
+          method="post"
+          action="phpmailer/reserve_template_email.php"
+          id="bookingform"
+          autocomplete="off"
+          onsubmit="return validateForm()"
+        >
+          <input
+            type="hidden"
+            id="date_booking"
+            name="date_booking"
+          />
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="custom_select">
+                <select
+                  class="wide"
+                  name="rooms_booking"
+                  id="rooms_booking"
+                  required
                 >
-                  Check Availability
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="second_tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#second_tab_pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="second_tab_pane"
-                  aria-selected="false"
-                >
-                  Contact Us
-                </button>
-              </li>
-            </ul>
-            <!-- /tabs -->
-            <div class="tab-content">
-              <div
-                class="tab-pane fade show active"
-                id="first_tab_pane"
-                role="tabpanel"
-                aria-labelledby="first_tab"
-                tabindex="0"
-              >
-                <div class="booking_wrapper">
-                  <div id="message-booking"></div>
-                  <form
-                    method="post"
-                    action="phpmailer/reserve_template_email.php"
-                    id="bookingform"
-                    autocomplete="off"
-                  >
-                    <input
-                      type="hidden"
-                      id="date_booking"
-                      name="date_booking"
-                    />
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="custom_select">
-                          <select
-                            class="wide"
-                            name="rooms_booking"
-                            id="rooms_booking"
-                          >
-                            <option value="">Select Room</option>
-                            <option value="Double Room">Double Room</option>
-                            <option value="Deluxe Room">Deluxe Room</option>
-                            <option value="Superior Room">Superior Room</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="qty-buttons mb-3 version_2">
-                              <input
-                                type="button"
-                                value="+"
-                                class="qtyplus"
-                                name="adults_booking"
-                              />
-                              <input
-                                type="text"
-                                name="adults_booking"
-                                id="adults_booking"
-                                value=""
-                                class="qty form-control"
-                                placeholder="Adults"
-                              />
-                              <input
-                                type="button"
-                                value="-"
-                                class="qtyminus"
-                                name="adults_booking"
-                              />
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="mb-3 qty-buttons mb-3 version_2">
-                              <input
-                                type="button"
-                                value="+"
-                                class="qtyplus"
-                                name="childs_booking"
-                              />
-                              <input
-                                type="text"
-                                name="childs_booking"
-                                id="childs_booking"
-                                value=""
-                                class="qty form-control"
-                                placeholder="Childs"
-                              />
-                              <input
-                                type="button"
-                                value="-"
-                                class="qtyminus"
-                                name="childs_booking"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- / row -->
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="text"
-                            name="name_booking"
-                            id="name_booking"
-                            class="form-control"
-                            placeholder="Name and Last Name"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="form-group">
-                          <input
-                            type="email"
-                            name="email_booking"
-                            id="email_booking"
-                            class="form-control"
-                            placeholder="Email"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- / row -->
-                    <hr />
-                    <div class="row">
-                      <div class="col-md-6 mb-4">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <label for="verify_booking" class="col-form-label"
-                              ><strong>Are you human?</strong></label
-                            >
-                          </div>
-                          <div class="col-md-4">
-                            <input
-                              type="text"
-                              name="verify_booking"
-                              id="verify_booking"
-                              class="form-control"
-                              placeholder="3 + 1 = ?"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-2">
-                        <p class="text-end">
-                          <input
-                            class="btn_1 outline"
-                            type="submit"
-                            value="Check Now"
-                            id="submit-booking"
-                          />
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / row -->
-                  </form>
-                </div>
-                <!-- / booking_wrapper -->
+                  <option value="" disabled selected>Select Room</option>
+                  <option value="Double Room">Double Room</option>
+                  <option value="Deluxe Room">Deluxe Room</option>
+                  <option value="Superior Room">Superior Room</option>
+                </select>
               </div>
-              <!-- /tab_booking-->
-              <div
-                class="tab-pane fade"
-                id="second_tab_pane"
-                role="tabpanel"
-                aria-labelledby="second_tab"
-                tabindex="0"
-              >
-                <div class="contacts_wrapper">
-                  <div id="message-contact"></div>
-                  <form
-                    method="post"
-                    action="phpmailer/contact_template_email.php"
-                    id="contactform"
-                    autocomplete="off"
-                  >
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="form-floating mb-4">
-                          <input
-                            class="form-control"
-                            type="text"
-                            id="name_contact"
-                            name="name_contact"
-                            placeholder="Name"
-                          />
-                          <label for="name_contact">Name</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-floating mb-4">
-                          <input
-                            class="form-control"
-                            type="text"
-                            id="lastname_contact"
-                            name="lastname_contact"
-                            placeholder="Last Name"
-                          />
-                          <label for="lastname_contact">Last name</label>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /row -->
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="form-floating mb-4">
-                          <input
-                            class="form-control"
-                            type="email"
-                            id="email_contact"
-                            name="email_contact"
-                            placeholder="Email"
-                          />
-                          <label for="email_contact">Email</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-floating mb-4">
-                          <input
-                            class="form-control"
-                            type="text"
-                            id="phone_contact"
-                            name="phone_contact"
-                            placeholder="Telephone"
-                          />
-                          <label for="phone_contact">Telephone</label>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /row -->
-                    <div class="form-floating mb-4">
-                      <textarea
-                        class="form-control"
-                        placeholder="Message"
-                        id="message_contact"
-                        name="message_contact"
-                      ></textarea>
-                      <label for="message_contact">Message</label>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-md-6 mb-4">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <label for="verify_booking" class="col-form-label"
-                              ><strong>Are you human?</strong></label
-                            >
-                          </div>
-                          <div class="col-md-4">
-                            <input
-                              type="text"
-                              name="verify_contact"
-                              id="verify_contact"
-                              class="form-control"
-                              placeholder="3 + 1 = ?"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-2">
-                        <p class="text-end">
-                          <input
-                            class="btn_1 outline"
-                            type="submit"
-                            value="Submit"
-                            id="submit-contact"
-                          />
-                        </p>
-                      </div>
-                    </div>
-                    <!-- / row -->
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-6">
+                  <div class="qty-buttons mb-3 version_2">
+                    <input
+                      type="button"
+                      value="+"
+                      class="qtyplus"
+                      name="adults_booking"
+                    />
+                    <input
+                      type="number"
+                      name="adults_booking"
+                      id="adults_booking"
+                      value=""
+                      class="qty form-control"
+                      placeholder="Adults"
+                      required
+                    />
+                    <input
+                      type="button"
+                      value="-"
+                      class="qtyminus"
+                      name="adults_booking"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3 qty-buttons mb-3 version_2">
+                    <input
+                      type="button"
+                      value="+"
+                      class="qtyplus"
+                      name="childs_booking"
+                    />
+                    <input
+                      type="number"
+                      name="childs_booking"
+                      id="childs_booking"
+                      value=""
+                      class="qty form-control"
+                      placeholder="Childs"
+                      required
+                    />
+                    <input
+                      type="button"
+                      value="-"
+                      class="qtyminus"
+                      name="childs_booking"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name_booking"
+                  id="name_booking"
+                  class="form-control"
+                  placeholder="Name and Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email_booking"
+                  id="email_booking"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <!-- / row -->
+          <hr />
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <!-- Optional content -->
+            </div>
+            <div class="col-md-6 mb-2">
+              <p class="text-end">
+                <input
+                  class="btn_1 outline"
+                  type="submit"
+                  value="Check Now"
+                  id="submit-booking"
+                />
+              </p>
+            </div>
+          </div>
+          <!-- / row -->
+        </form>
+      </div>
+      <!-- / booking_wrapper -->
+    </div>
+    <!-- / first_tab_pane -->
+
+    <div
+      class="tab-pane fade"
+      id="second_tab_pane"
+      role="tabpanel"
+      aria-labelledby="second_tab"
+      tabindex="0"
+    >
+      <div class="contacts_wrapper">
+        <div id="message-contact"></div>
+        <form id="contactform" autocomplete="off" onsubmit="submitContactForm(); return false;">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="name_contact"
+                  name="name_contact"
+                  placeholder="Name"
+                  required
+                />
+                <label for="name_contact">Name</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="lastname_contact"
+                  name="lastname_contact"
+                  placeholder="Last Name"
+                  required
+                />
+                <label for="lastname_contact">Last name</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email_contact"
+                  name="email_contact"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email_contact">Email</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phone_contact"
+                  name="phone_contact"
+                  placeholder="Telephone"
+                  required
+                />
+                <label for="phone_contact">Telephone</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-floating mb-4">
+            <textarea
+              class="form-control"
+              placeholder="Message"
+              id="message_contact"
+              name="message_contact"
+              required
+            ></textarea>
+            <label for="message_contact">Message</label>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <!-- Optional content -->
+            </div>
+            <div class="col-md-6 mb-2">
+              <p class="text-end">
+                <input
+                  class="btn_1 outline"
+                  type="submit"
+                  value="Submit"
+                  id="submit-contact"
+                />
+              </p>
+            </div>
+          </div>
+          <!-- / row -->
+        </form>
+      </div>
+      <!-- / contacts_wrapper -->
+    </div>
+    <!-- / second_tab_pane -->
+  </div>
+</div>
+
+
+
+
+
                   </form>
                 </div>
                 <!-- /tab_contacts-->
@@ -1238,5 +1243,43 @@
     <script src="phpmailer/validate.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script>
+function submitContactForm() {
+    // Collect form data
+    const name = document.getElementById("name_contact").value;
+    const lastname = document.getElementById("lastname_contact").value;
+    const email = document.getElementById("email_contact").value;
+    const phone = document.getElementById("phone_contact").value;
+    const message = document.getElementById("message_contact").value;
+
+    // Create AJAX request
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/contact_connection.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // Handle the response
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            alert("Form submitted successfully!");
+            
+        } else {
+            alert("Failed to submit form. Please try again.");
+        }
+    };
+
+    // Send form data
+    xhr.send(
+      "name_contact=" + encodeURIComponent(name) + 
+      "&lastname_contact=" + encodeURIComponent(lastname) + 
+      "&email_contact=" + encodeURIComponent(email) + 
+      "&phone_contact=" + encodeURIComponent(phone) + 
+      "&message_contact=" + encodeURIComponent(message)
+    );
+}
+</script>
+
+
+
+      
   </body>
 </html>
