@@ -1,0 +1,1285 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <form method="post" action="php/reserve_connection.php" id="bookingform" autocomplete="off">
+    <form method="post" action="php/contact_connection.php" id="contactform">
+      
+
+    <meta
+      name="description"
+      content="Simple and easy to edit Bed and Breakfast site template"
+    />
+    <meta name="author" content="Ansonika" />
+    <title>VillaVibe</title>
+
+    <!-- Favicons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="img/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    />
+
+    <!-- GOOGLE WEB FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/vendors.min.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-offset="120" data-bs-target="#mainNav">
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Page Preload -->
+
+    <header class="fixed_header menu_v1">
+      <div class="layer"></div>
+      <!-- Opacity Mask -->
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 col-5">
+            <a href="index.html" class="logo_normal"
+              ><img
+                src="img/logo.png"
+                width="180"
+                height="34"
+                alt=""
+                class="img-fluid"
+            /></a>
+            <a href="index.html" class="logo_sticky"
+              ><img
+                src="img/logo_sticky.png"
+                width="180"
+                height="34"
+                alt=""
+                class="img-fluid"
+            /></a>
+          </div>
+          <div class="col-md-9 col-7">
+            <div class="main-menu">
+              <a href="#0" class="closebt open_close_menu"
+                ><i class="bi bi-x"></i
+              ></a>
+              <div class="logo_panel">
+                <img src="img/logo_sticky.png" width="180" height="34" alt="" />
+              </div>
+              <nav id="mainNav">
+                <ul>
+                  <li>
+                    <a href="#about" class="js-scroll-trigger animated_link"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#rooms" class="js-scroll-trigger animated_link"
+                      >Rooms</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#gallery" class="js-scroll-trigger animated_link"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#amenities" class="js-scroll-trigger animated_link"
+                      >Activities</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#contacts" class="js-scroll-trigger animated_link"
+                      >Contacts</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#booking_section" class="js-scroll-trigger btn_1"
+                      >Book Now</a
+                    >
+                  </li>
+                  
+                  <!-- login button -->
+                  <li>
+                    <a href="#" class="">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                </li>
+                
+                </ul>
+              </nav>
+            </div>
+            <div class="hamburger_2 open_close_menu float-end">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+    </header>
+
+    <!-- End Header -->
+
+    <main>
+      <div
+        class="hero full-height jarallax"
+        data-jarallax-video="mp4:./video/video_2.mp4,webm:./video/video_2.webm,ogv:./video/video_2.ogv"
+        data-speed="0.2"
+      >
+        <div
+          class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero"
+          data-opacity-mask="rgba(0, 0, 0, 0.5)"
+        >
+          <div class="container">
+            <small class="slide-animated one">Villa Vibe Resort</small>
+            <h3 class="slide-animated two">
+              Your Ultimate Destination for<br />Relaxation and Luxury
+            </h3>
+            <figure class="slide-animated three mt-3">
+              <img
+                src="img/Airbnb_Logo.svg"
+                alt=""
+                class="img-fluid me-2"
+                width="113"
+                height="35"
+              />
+              <img
+                src="img/TripAdvisor_Logo_white.svg"
+                alt=""
+                class="img-fluid ms-2"
+                width="165"
+                height="35"
+              />
+            </figure>
+          </div>
+          <div class="lang_wp">
+            <div class="styled-select lang-selector">
+              <select>
+                <option value="English" selected="">English</option>
+                <option value="French">Sinhala</option>
+              </select>
+            </div>
+          </div>
+          <!-- /lang_wp -->
+        </div>
+      </div>
+      <!-- /Background Video Parallax -->
+
+      <div class="bg_white" id="about">
+        <div class="container margin_120_95">
+          <div
+            class="row justify-content-between flex-lg-row-reverse align-items-center"
+          >
+            <div class="col-lg-5">
+              <div class="parallax_wrapper">
+                <img
+                  src="img/home_2.jpg"
+                  alt=""
+                  class="img-fluid rounded-img"
+                />
+                <div data-cue="slideInUp" class="img_over">
+                  <span data-jarallax-element="-30"
+                    ><img src="img/home_1.jpg" alt="" class="rounded-img"
+                  /></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="intro">
+                <div class="title">
+                  <small>About us</small>
+                  <h2>Makes your self at home and enjoy a unique experience</h2>
+                </div>
+                <p class="lead">
+                  Discover the perfect blend of modern amenities and timeless
+                  elegance, all within a serene and picturesque setting. At
+                  Villa Vibe, we pride ourselves on offering exceptional service
+                  and creating unforgettable stays for our guests.
+                </p>
+                <p>
+                  From our exquisite dining options to our luxurious
+                  accommodations, every detail is designed to exceed your
+                  expectations and make you feel truly special. Whether you're
+                  here for a relaxing getaway or a special occasion, Villa Vibe
+                  is your ultimate destination for relaxation and luxury.
+                </p>
+                <p><em>Kaveesha...the Owner</em></p>
+              </div>
+            </div>
+          </div>
+          <!-- /Row -->
+          <hr class="more_margin" />
+          <div class="row mt-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="box_facilities no-border" data-cue="slideInUp">
+                <i class="icon-hotel-parking"></i>
+                <h3>Private Parking</h3>
+                <p>
+                  Enjoy the convenience of our secure and spacious private
+                  parking area, available exclusively for our guests.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="box_facilities no-border" data-cue="slideInUp">
+                <i class="icon-hotel-disable"></i>
+                <h3>Accessible</h3>
+                <p>
+                  Our resort is fully accessible, with facilities designed to
+                  ensure a comfortable stay for all our guests.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="box_facilities no-border" data-cue="slideInUp">
+                <i class="icon-hotel-dog"></i>
+                <h3>Per Friendly</h3>
+                <p>
+                  We welcome your furry friends with open arms, providing
+                  pet-friendly accommodations and amenities.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="box_facilities no-border" data-cue="slideInUp">
+                <i class="icon-hotel-patio"></i>
+                <h3>Patio Garden</h3>
+                <p>
+                  Relax and unwind in our beautifully landscaped patio garden, a
+                  tranquil oasis perfect for any time of day.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Row -->
+        </div>
+      </div>
+      <!-- /About  -->
+
+      <div class="parallax_section_1 jarallax" data-jarallax data-speed="0.2">
+        <img class="jarallax-img kenburns-2" src="img/parallax_bg.jpg" alt="" />
+        <div
+          class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center"
+          data-opacity-mask="rgba(0, 0, 0, 0.5)"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="title white">
+                  <small class="mb-1">Testimonials</small>
+                  <h2>What Clients Says</h2>
+                </div>
+                <div
+                  class="carousel_testimonials owl-carousel owl-theme nav-dots-orizontal"
+                >
+                  <div>
+                    <div class="box_overlay">
+                      <div class="pic">
+                        <figure>
+                          <img
+                            src="img/testimonial_1.jpg"
+                            alt=""
+                            class="img-circle"
+                          />
+                        </figure>
+                        <h4>Roberta<small>12 Oct</small></h4>
+                      </div>
+                      <div class="comment">
+                        "Mea ad postea meliore fuisset. Timeam repudiare id eum,
+                        ex paulo dictas elaboraret sed, mel cu unum nostrud."
+                      </div>
+                    </div>
+                    <!-- End box_overlay -->
+                  </div>
+                  <div>
+                    <div class="box_overlay">
+                      <div class="pic">
+                        <figure>
+                          <img
+                            src="img/testimonial_1.jpg"
+                            alt=""
+                            class="img-circle"
+                          />
+                        </figure>
+                        <h4>Roberta<small>2 Nov</small></h4>
+                      </div>
+                      <div class="comment">
+                        "Mea ad postea meliore fuisset. Timeam repudiare id eum,
+                        ex paulo dictas elaboraret sed, mel cu unum nostrud."
+                      </div>
+                    </div>
+                    <!-- End box_overlay -->
+                  </div>
+                  <div>
+                    <div class="box_overlay">
+                      <div class="pic">
+                        <figure>
+                          <img
+                            src="img/testimonial_1.jpg"
+                            alt=""
+                            class="img-circle"
+                          />
+                        </figure>
+                        <h4>Roberta<small>3 Dec</small></h4>
+                      </div>
+                      <div class="comment">
+                        "Mea ad postea meliore fuisset. Timeam repudiare id eum,
+                        ex paulo dictas elaboraret sed, mel cu unum nostrud."
+                      </div>
+                    </div>
+                    <!-- End box_overlay -->
+                  </div>
+                </div>
+                <!-- End carousel_testimonials -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /parallax_section_1-->
+
+      <div class="container margin_120_95" id="rooms">
+        <div class="title mb-4">
+          <small data-cue="slideInUp">Luxury experience</small>
+          <h2 data-cue="slideInUp" data-delay="200">Our Rooms</h2>
+        </div>
+
+        <div class="row_list_version_2" data-cue="slideInUp" data-delay="300">
+          <div class="row g-0 align-items-center">
+            <div class="col-xl-8">
+              <div
+                class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img"
+              >
+                <div class="item">
+                  <a
+                    data-fslightbox="room_1"
+                    data-type="image"
+                    href="img/rooms/1.jpg"
+                    ><img src="img/rooms/1.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="item">
+                  <a
+                    data-fslightbox="room_1"
+                    data-type="image"
+                    href="img/rooms/opt_1.jpg"
+                    ><img src="img/rooms/opt_1.jpg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <!-- /carousel -->
+            </div>
+            <div class="col-xl-4">
+              <div class="box_item_info" data-jarallax-element="-25">
+                <small>From $150/night</small>
+                <h2>Double Room</h2>
+                <p>
+                  Beautiful design with modern furnishings including a glamorous
+                  bay window with your own private view of Lucerne.
+                </p>
+                <div class="facilities clearfix">
+                  <ul>
+                    <li><i class="customicon-double-bed"></i> King Size Bed</li>
+                    <li><i class="customicon-television"></i> 32 Inc TV</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /box_item_info -->
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /row_list -->
+        <div class="row_list_version_2 inverted" data-cue="slideInUp">
+          <div class="row g-0 align-items-center">
+            <div class="col-xl-8 order-xl-2">
+              <div
+                class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img"
+              >
+                <div class="item">
+                  <a
+                    data-fslightbox="room_2"
+                    data-type="image"
+                    href="img/rooms/2.jpg"
+                    ><img src="img/rooms/2.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="item">
+                  <a
+                    data-fslightbox="room_2"
+                    data-type="image"
+                    href="img/rooms/opt_2.jpg"
+                    ><img src="img/rooms/opt_2.jpg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <!-- /carousel -->
+            </div>
+            <div class="col-xl-4 order-xl-1">
+              <div class="box_item_info" data-jarallax-element="-25">
+                <small>From $190/night</small>
+                <h2>Deluxe Room</h2>
+                <p>
+                  Beautiful design with modern furnishings including a glamorous
+                  bay window with your own private view of Lucerne.
+                </p>
+                <div class="facilities clearfix">
+                  <ul>
+                    <li><i class="customicon-double-bed"></i> King Size Bed</li>
+                    <li><i class="customicon-television"></i> 32 Inc TV</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /box_item_info -->
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /row_list -->
+        <div class="row_list_version_2" data-cue="slideInUp">
+          <div class="row g-0 align-items-center">
+            <div class="col-xl-8">
+              <div
+                class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img"
+              >
+                <div class="item">
+                  <a
+                    data-fslightbox="room_3"
+                    data-type="image"
+                    href="img/rooms/3.jpg"
+                    ><img src="img/rooms/3.jpg" alt=""
+                  /></a>
+                </div>
+                <div class="item">
+                  <a
+                    data-fslightbox="room_3"
+                    data-type="image"
+                    href="img/rooms/opt_3.jpg"
+                    ><img src="img/rooms/opt_3.jpg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <!-- /carousel -->
+            </div>
+            <div class="col-xl-4">
+              <div class="box_item_info" data-jarallax-element="-25">
+                <small>From $230/night</small>
+                <h2>Superior Room</h2>
+                <p>
+                  Beautiful design with modern furnishings including a glamorous
+                  bay window with your own private view of Lucerne.
+                </p>
+                <div class="facilities clearfix">
+                  <ul>
+                    <li><i class="customicon-double-bed"></i> King Size Bed</li>
+                    <li><i class="customicon-television"></i> 32 Inc TV</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /box_item_info -->
+            </div>
+            <!-- /col -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /row_list -->
+
+        <div class="title text-center mb-5">
+          <small data-cue="slideInUp">Luxury Villa Experience</small>
+          <h2 data-cue="slideInUp" data-delay="100">Main Facilities</h2>
+        </div>
+        <div class="row mt-4">
+          <div class="col-xl-3 col-md-6">
+            <div class="box_facilities no-border" data-cue="slideInUp">
+              <i class="customicon-bath-tub"></i>
+              <h3>Large Bath Room</h3>
+              <p>
+                Experience luxury and comfort in our spacious bathrooms,
+                equipped with modern amenities and elegant design.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="box_facilities" data-cue="slideInUp">
+              <i class="customicon-wifi"></i>
+              <h3>High Speed Wifi</h3>
+              <p>
+                Stay connected with our complimentary high-speed WiFi, available
+                throughout the resort for your convenience.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="box_facilities" data-cue="slideInUp">
+              <i class="customicon-air-condition"></i>
+              <h3>Air Condition</h3>
+              <p>
+                Enjoy a comfortable stay with our state-of-the-art air
+                conditioning system, ensuring a pleasant environment.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="box_facilities" data-cue="slideInUp">
+              <i class="customicon-washing-machine"></i>
+              <h3>Wahsing Machine</h3>
+              <p>
+                Take advantage of our in-room washing machines, providing you
+                with the convenience of fresh clothes during your stay.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /Row -->
+      </div>
+      <!-- /container-->
+
+      <div class="marquee">
+        <div class="track">
+          <div class="content">
+            &nbsp;Relax Enjoy Luxury Holiday Travel Discover Experience Relax
+            Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury
+            Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel
+            Discover Experience
+          </div>
+        </div>
+      </div>
+      <!-- /marquee-->
+
+      <div class="bg_white">
+        <div class="pinned-image pinned-image--medium">
+          <div class="pinned-image__container">
+            <img src="img/parallax_bg.jpg" alt="" />
+            <div class="pinned-image__container-overlay"></div>
+          </div>
+          <div class="pinned_over_content">
+            <div class="title white">
+              <small data-cue="slideInUp" data-delay="200"
+                >Luxury Villa Experience</small
+              >
+              <h2 data-cue="slideInUp" data-delay="300">
+                Unwind in <br />
+                Ultimate Comfort and Luxury
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- /pinned content -->
+      </div>
+      <!-- /bg_white-->
+
+      <div class="container margin_120" id="gallery">
+        <div class="row">
+          <div class="title col-12 text-center mb-5">
+            <small data-cue="slideInUp">Luxury Villa Experience</small>
+            <h2 data-cue="slideInUp" data-delay="100">Interior Gallery</h2>
+          </div>
+        </div>
+        <div data-cues="zoomIn">
+          <div
+            class="owl-carousel owl-theme carousel_item_centered kenburns rounded-img"
+          >
+            <div class="item">
+              <img src="img/gallery/1.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/gallery/2.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/gallery/3.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/gallery/4.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/gallery/5.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a
+            data-fslightbox="gallery_1"
+            data-type="image"
+            href="img/gallery/1.jpg"
+            class="btn_1 outline"
+          >
+            FullScreen Gallery
+          </a>
+          <a
+            data-fslightbox="gallery_1"
+            data-type="image"
+            href="img/gallery/2.jpg"
+          ></a>
+          <a
+            data-fslightbox="gallery_1"
+            data-type="image"
+            href="img/gallery/3.jpg"
+          ></a>
+          <a
+            data-fslightbox="gallery_1"
+            data-type="image"
+            href="img/gallery/4.jpg"
+          ></a>
+          <a
+            data-fslightbox="gallery_1"
+            data-type="image"
+            href="img/gallery/5.jpg"
+          ></a>
+        </div>
+      </div>
+      <div class="bg_white" id="amenities">
+        <div class="container margin_120_95">
+          <div
+            class="row justify-content-between d-flex align-items-center add_bottom_90"
+          >
+            <div class="col-lg-6">
+              <div
+                class="pinned-image rounded_container pinned-image--small mb-4"
+              >
+                <div class="pinned-image__container">
+                  <img
+                    src="img/local_amenities_1.jpg"
+                    alt="Sri Lankan Cuisine"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="title">
+                <small>Local Activities</small>
+                <h3>Typical Food</h3>
+                <p>
+                  Experience the rich flavors of the Galle region with a variety
+                  of traditional dishes that highlight local ingredients and
+                  culinary heritage.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /row-->
+          <div class="row justify-content-between d-flex align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div
+                class="pinned-image rounded_container pinned-image--small mb-4"
+              >
+                <div class="pinned-image__container">
+                  <img src="img/local_amenities_3.jpg" alt="Galle Fort Tour" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+              <div class="title">
+                <small>Local Activities</small>
+                <h3>Galle Fort Tour</h3>
+                <p>
+                  Discover the historic Galle Fort, a UNESCO World Heritage
+                  site, with its charming cobblestone streets, colonial
+                  architecture, and panoramic ocean views.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /row-->
+
+          <hr class="more_margin" />
+
+          <div class="row justify-content-center">
+            <div class="title text-center mb-5">
+              <small data-cue="slideInUp">Local Activities</small>
+              <h2 data-cue="slideInUp" data-delay="100">Available Tours</h2>
+            </div>
+            <div class="col-lg-8">
+              <div role="tablist" class="mb-5 accordion" id="accordion_1">
+                <div class="card" data-cue="slideInUp">
+                  <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                      <a
+                        class="collapsed"
+                        data-bs-toggle="collapse"
+                        href="#collapseOne_product"
+                        aria-expanded="false"
+                      >
+                        <i class="indicator bi-plus-lg"></i>Whale Watching Tour
+                        - Duration 60min
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseOne_product"
+                    class="collapse"
+                    role="tabpanel"
+                    data-bs-parent="#accordion_1"
+                  >
+                    <div class="card-body">
+                      <p>
+                        Embark on an exciting whale watching tour off the coast
+                        of Galle, where you can witness these majestic creatures
+                        in their natural habitat.
+                      </p>
+                      <p>
+                        Enjoy the breathtaking views of the ocean and the
+                        opportunity to see a variety of marine life, including
+                        dolphins and sea turtles.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card -->
+                <div class="card" data-cue="slideInUp">
+                  <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                      <a
+                        class="collapsed"
+                        data-bs-toggle="collapse"
+                        href="#collapseTwo_product"
+                        aria-expanded="false"
+                      >
+                        <i class="indicator bi-plus-lg"></i>Galle Fort Walking
+                        Tour - Duration 90min
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo_product"
+                    class="collapse"
+                    role="tabpanel"
+                    data-bs-parent="#accordion_1"
+                  >
+                    <div class="card-body">
+                      <p>
+                        Take a guided walking tour through the historic Galle
+                        Fort, learning about its rich history, cultural
+                        significance, and colonial architecture.
+                      </p>
+                      <p>
+                        Explore the narrow streets, visit museums, and enjoy the
+                        vibrant atmosphere of this unique UNESCO World Heritage
+                        site.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card -->
+                <div class="card" data-cue="slideInUp">
+                  <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                      <a
+                        class="collapsed"
+                        data-bs-toggle="collapse"
+                        href="#collapseThree_product"
+                        aria-expanded="false"
+                      >
+                        <i class="indicator bi-plus-lg"></i>Boat Safari on Madu
+                        River - Duration 60min
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseThree_product"
+                    class="collapse"
+                    role="tabpanel"
+                    data-bs-parent="#accordion_1"
+                  >
+                    <div class="card-body">
+                      <p>
+                        Enjoy a serene boat safari on the Madu River, a
+                        biodiverse estuary known for its mangrove forests,
+                        birdlife, and small islands.
+                      </p>
+                      <p>
+                        This tour offers a tranquil escape with opportunities to
+                        see wildlife up close and experience the natural beauty
+                        of the area.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card -->
+                <div class="card" data-cue="slideInUp">
+                  <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                      <a
+                        class="collapsed"
+                        data-bs-toggle="collapse"
+                        href="#collapseFour_product"
+                        aria-expanded="false"
+                      >
+                        <i class="indicator bi-plus-lg"></i>Unawatuna Beach
+                        Relaxation - Duration 60min
+                      </a>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseFour_product"
+                    class="collapse"
+                    role="tabpanel"
+                    data-bs-parent="#accordion_1"
+                  >
+                    <div class="card-body">
+                      <p>
+                        Unwind at the picturesque Unawatuna Beach, known for its
+                        golden sands, clear waters, and vibrant coral reefs.
+                      </p>
+                      <p>
+                        This tour provides a perfect getaway for sunbathing,
+                        swimming, and enjoying the scenic coastal beauty of
+                        Galle.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /card -->
+              </div>
+              <!-- /accordion -->
+            </div>
+          </div>
+          <!-- /row-->
+        </div>
+        <!-- /container-->
+      </div>
+      <!-- /bg_white -->
+
+      <div class="container margin_120_95" id="contacts">
+        <div class="row justify-content-between">
+          <div class="col-xl-4">
+            <div data-cue="slideInUp">
+              <div class="title">
+                <small>Villa Vibe Resort</small>
+                <h2>Address</h2>
+              </div>
+              <p>456 Beach Road, Galle 80000<br />Sri Lanka</p>
+              <div class="phone_element no_borders">
+                <a href="tel://+94987654321"
+                  ><i class="bi bi-telephone"></i
+                  ><span><em>Bookings</em>+94 987 654 321</span></a
+                >
+              </div>
+              <div class="phone_element no_borders">
+                <a href="mailto:info@villavibe.lk"
+                  ><i class="bi bi-envelope"></i>
+                  <span><em>Questions</em>info@villavibe.lk</span></a
+                >
+              </div>
+              <div class="social mt-1">
+                <ul>
+                  <li>
+                    <a href="#0"><i class="bi bi-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#0"><i class="bi bi-whatsapp"></i></a>
+                  </li>
+                  <li>
+                    <a href="#0"><i class="bi bi-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#0"><i class="bi bi-twitter-x"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+         <!-- Booking section -->
+<div class="col-xl-7" id="booking_section">
+  <ul class="nav nav-tabs" id="customTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="first_tab"
+        data-bs-toggle="tab"
+        data-bs-target="#first_tab_pane"
+        type="button"
+        role="tab"
+        aria-controls="first_tab_pane"
+        aria-selected="true"
+      >
+        Check Availability
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="second_tab"
+        data-bs-toggle="tab"
+        data-bs-target="#second_tab_pane"
+        type="button"
+        role="tab"
+        aria-controls="second_tab_pane"
+        aria-selected="false"
+      >
+        Contact Us
+      </button>
+    </li>
+  </ul>
+  <!-- /tabs -->
+  <div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="first_tab_pane"
+      role="tabpanel"
+      aria-labelledby="first_tab"
+      tabindex="0"
+    >
+      <div class="booking_wrapper">
+        <div id="message-booking"></div>
+        <form
+          method="post"
+          action="phpmailer/reserve_template_email.php"
+          id="bookingform"
+          autocomplete="off"
+          onsubmit="return validateForm()"
+        >
+          <input
+            type="hidden"
+            id="date_booking"
+            name="date_booking"
+          />
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="custom_select">
+                <select
+                  class="wide"
+                  name="rooms_booking"
+                  id="rooms_booking"
+                  required
+                >
+                  <option value="" disabled selected>Select Room</option>
+                  <option value="Double Room">Double Room</option>
+                  <option value="Deluxe Room">Deluxe Room</option>
+                  <option value="Superior Room">Superior Room</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-6">
+                  <div class="qty-buttons mb-3 version_2">
+                    <input
+                      type="button"
+                      value="+"
+                      class="qtyplus"
+                      name="adults_booking"
+                    />
+                    <input
+                      type="number"
+                      name="adults_booking"
+                      id="adults_booking"
+                      value=""
+                      class="qty form-control"
+                      placeholder="Adults"
+                      required
+                    />
+                    <input
+                      type="button"
+                      value="-"
+                      class="qtyminus"
+                      name="adults_booking"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3 qty-buttons mb-3 version_2">
+                    <input
+                      type="button"
+                      value="+"
+                      class="qtyplus"
+                      name="childs_booking"
+                    />
+                    <input
+                      type="number"
+                      name="childs_booking"
+                      id="childs_booking"
+                      value=""
+                      class="qty form-control"
+                      placeholder="Childs"
+                      required
+                    />
+                    <input
+                      type="button"
+                      value="-"
+                      class="qtyminus"
+                      name="childs_booking"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name_booking"
+                  id="name_booking"
+                  class="form-control"
+                  placeholder="Name and Last Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email_booking"
+                  id="email_booking"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <!-- / row -->
+          <hr />
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <!-- Optional content -->
+            </div>
+            <div class="col-md-6 mb-2">
+              <p class="text-end">
+                <input
+                  class="btn_1 outline"
+                  type="submit"
+                  value="Check Now"
+                  id="submit-booking"
+                />
+              </p>
+            </div>
+          </div>
+          <!-- / row -->
+        </form>
+      </div>
+      <!-- / booking_wrapper -->
+    </div>
+    <!-- / first_tab_pane -->
+
+    <div
+      class="tab-pane fade"
+      id="second_tab_pane"
+      role="tabpanel"
+      aria-labelledby="second_tab"
+      tabindex="0"
+    >
+      <div class="contacts_wrapper">
+        <div id="message-contact"></div>
+        <form id="contactform" autocomplete="off" onsubmit="submitContactForm(); return false;">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="name_contact"
+                  name="name_contact"
+                  placeholder="Name"
+                  required
+                />
+                <label for="name_contact">Name</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="lastname_contact"
+                  name="lastname_contact"
+                  placeholder="Last Name"
+                  required
+                />
+                <label for="lastname_contact">Last name</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email_contact"
+                  name="email_contact"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email_contact">Email</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-floating mb-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="phone_contact"
+                  name="phone_contact"
+                  placeholder="Telephone"
+                  required
+                />
+                <label for="phone_contact">Telephone</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-floating mb-4">
+            <textarea
+              class="form-control"
+              placeholder="Message"
+              id="message_contact"
+              name="message_contact"
+              required
+            ></textarea>
+            <label for="message_contact">Message</label>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <!-- Optional content -->
+            </div>
+            <div class="col-md-6 mb-2">
+              <p class="text-end">
+                <input
+                  class="btn_1 outline"
+                  type="submit"
+                  value="Submit"
+                  id="submit-contact"
+                />
+              </p>
+            </div>
+          </div>
+          <!-- / row -->
+        </form>
+      </div>
+      <!-- / contacts_wrapper -->
+    </div>
+    <!-- / second_tab_pane -->
+  </div>
+</div>
+
+
+
+
+
+                  </form>
+                </div>
+                <!-- /tab_contacts-->
+              </div>
+              <!-- /contacts_wrapper-->
+            </div>
+            <!-- /tab_content-->
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <div
+      class="map_contact"
+      style="margin: 50px; border-radius: 15px; overflow: hidden"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.502758209458!2d80.21025565831284!3d6.031787790347313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173a2d8360235%3A0xdf2f74057e1c0bdb!2sLe%20Grand%20Galle!5e0!3m2!1sen!2slk!4v1690012278785!5m2!1sen!2slk"
+        width="600"
+        height="450"
+        style="border: 0; border-radius: 10px"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!--/map_contact -->
+    <div class="copy">
+      <div class="container">
+        © 2024 Villa Vibe Resort - by
+        <a href="https://github.com/KaveeSL">Kaveesha</a>
+      </div>
+    </div>
+
+    <!--/copyright line -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="js/datepicker_inline.js"></script>
+    <script src="phpmailer/validate.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script>
+function submitContactForm() {
+    // Collect form data
+    const name = document.getElementById("name_contact").value;
+    const lastname = document.getElementById("lastname_contact").value;
+    const email = document.getElementById("email_contact").value;
+    const phone = document.getElementById("phone_contact").value;
+    const message = document.getElementById("message_contact").value;
+
+    // Create AJAX request
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/contact_connection.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // Handle the response
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            alert("Form submitted successfully!");
+            
+        } else {
+            alert("Failed to submit form. Please try again.");
+        }
+    };
+
+    // Send form data
+    xhr.send(
+      "name_contact=" + encodeURIComponent(name) + 
+      "&lastname_contact=" + encodeURIComponent(lastname) + 
+      "&email_contact=" + encodeURIComponent(email) + 
+      "&phone_contact=" + encodeURIComponent(phone) + 
+      "&message_contact=" + encodeURIComponent(message)
+    );
+}
+</script>
+
+
+
+      
+  </body>
+</html>
